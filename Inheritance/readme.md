@@ -1,2 +1,0 @@
-# Inheritance (상속)
-

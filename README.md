@@ -17,13 +17,12 @@
 ## Part 2
 
 * [클래스: 구조체의 진화](https://github.com/geunkim/CPPLectures/blob/master/Class)
-* 객체의 생성과 소멸 
+* [객체의 생성과 소멸](https://github.com/geunkim/CPPLectures/blob/master/Class/constructor_destructor.md) 
 * 객체와 포인터
-* 클래스와 상속
-  - 다중 상속
+* [클래스와 상속](https://github.com/geunkim/CPPLectures/tree/master/Inheritance)
 * 함수의 진화
   - 오버라이딩
-* 다형성
+* [다형성](https://github.com/geunkim/CPPLectures/tree/master/Polymorphism)
   - 가상함수
   - 순수 가상함수
 * 연산자 중복
@@ -51,4 +50,5 @@ References
 2. [boost C++ Libraries](https://www.boost.org/)
 3. [TCPSCHOOL.com - CPP](http://tcpschool.com/cpp/intro)
 4. [cplusplus.com](http://www.cplusplus.com/)
+5. [GeeksforGeeks - C++ Programming Language](https://www.geeksforgeeks.org/c-plus-plus/)
 
