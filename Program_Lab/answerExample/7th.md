@@ -208,3 +208,61 @@ int main()
 	return 0;
 }
 ```
+4번 문제
+```C++
+#include <iostream>
+using namespace std;
+
+class Car {
+	int speed;
+public:
+	Car(int s); ~Car() {}
+	int getSpeed();
+	void setSpeed(int s);
+};
+
+// CarFunc
+Car::Car(int s) {
+	speed = s;
+}
+int Car::getSpeed() {
+	return speed;
+}
+void Car::setSpeed(int s) {
+	speed = s;
+}
+
+class SportCar : public Car
+{
+	bool turbo;
+public:
+	SportCar(int s, bool t); ~SportCar() {}
+	bool getTurbo();
+	void setTurbo(bool t);
+};
+
+SportCar::SportCar(int s, bool t) : SportCar::Car(s)
+{
+	turbo = t;
+}
+bool SportCar::getTurbo() {
+	return turbo;
+}
+void SportCar::setTurbo(bool t) {
+	turbo = t;
+}
+
+int main(int argc, char const* argv[])
+{
+	Car abocado(3);
+	cout << "speed : " << abocado.getSpeed() << endl;
+	abocado.setSpeed(5);
+	cout << "speed : " << abocado.getSpeed() << endl;
+
+	SportCar burgerHam(7, true);
+	cout << "speed : " << burgerHam.getSpeed() << ", turbo : " << burgerHam.getTurbo() << endl;
+	burgerHam.setTurbo(false);
+	cout << "speed : " << burgerHam.getSpeed() << ", turbo : " << burgerHam.getTurbo() << endl;
+	return 0;
+}
+```
