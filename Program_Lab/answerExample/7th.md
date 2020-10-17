@@ -153,3 +153,58 @@ int main(int argc, char const *argv[])
 	return 0;
 }
 ```
+3번 문제
+```C++
+#include <iostream>
+using namespace std;
+class TwoDimension {
+protected:
+	double x, y;
+public:
+	TwoDimension(); // 자식 클래스가 사용할겁니다.
+	TwoDimension(double i, double j);
+
+	// 테스트용
+	double getX() { return x; }
+	double getY() { return y; }
+};
+
+TwoDimension::TwoDimension() : x{ 0 }, y{ 0 } {}
+TwoDimension::TwoDimension(double a, double b) :
+	x{ a }, y{ b }
+{}
+
+class ThreeDimension : public TwoDimension {
+	double z;
+public:
+	ThreeDimension(double i, double j, double k);
+	double getZ() { return z; }
+};
+ThreeDimension::ThreeDimension(double a, double b, double c) :
+	z{ c }
+{
+	x = a, y = b;
+}
+
+/*
+ThreeDimension::ThreeDimension(double a, double b, double c) :
+	x{ a }, y{ b }, z{ c }
+{}
+*/
+// "y"이(가) 비정적 데이터 멤버 또는 "ThreeDimension" 클래스의 기본 클래스가 아닙니다.
+
+
+
+int main()
+{
+    std::cout << "Hello World!\n";
+
+	TwoDimension twoD1(3.14, 15.92);
+	cout << "x : " << twoD1.getX() << ", y : " << twoD1.getY() << endl;
+	
+	ThreeDimension threeD1(12.34, 5.6, 78.9);
+	cout << "x : " << threeD1.getX() << ", y : " << threeD1.getY() << ", z : " << threeD1.getZ() << endl;
+
+	return 0;
+}
+```
